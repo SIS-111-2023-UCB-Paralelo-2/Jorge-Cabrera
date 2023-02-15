@@ -1,0 +1,20 @@
+Algoritmo ChequeoFiestaLocal
+	Definir edad Como Entero
+	Definir nombre Como Caracter
+	Escribir "A continuacion se registrarán sus datos."
+	Escribir "Introduzca su nombre"
+	Escribir "Introduzca su edad"
+	Escribir "Advertencia: Anotar en ese orden"
+	Leer nombre
+	Leer edad
+	Si edad>=18 Entonces
+		Escribir "Tiene la edad suficiente para pasar"
+	SiNo
+		Escribir "Usted no puede pasar porque es menor de Edad"
+	Fin Si
+	Si edad>=18 Entonces
+		Escribir nombre,"ha sido registrado en la lista. Puede pasar."
+	SiNo
+		Escribir "Por favor retirese" 
+	Fin Si
+FinAlgoritmo
