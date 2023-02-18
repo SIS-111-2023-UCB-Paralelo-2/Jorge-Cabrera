@@ -1,0 +1,33 @@
+Algoritmo PromedioProducto
+	Definir Mercadona,producto,TiendaLocal,Polimundo,promedio Como Real
+	Escribir "Programa para saber cuanto sale en promedio un producto en:"
+	Escribir "Mercadona, TiendaLocal y Polimundo"
+	Escribir "Ingrese el producto que desea saber su promedio"
+	Escribir "Leche = 1,  Café = 2,  Celular = 3"
+	Leer producto
+	Si producto=1 Entonces
+		Mercadona=6
+		TiendaLocal=8
+		Polimundo=14
+		promedio=(Mercadona+TiendaLocal+Polimundo)/3
+		Escribir "El promedio de su producto en Mercadona, TiendaLocal y Polimundo es: ",promedio,"Bs."
+	SiNo
+		Si producto=2 Entonces
+			Mercadona=12
+			TiendaLocal=17
+			Polimundo=28
+			promedio=(Mercadona+TiendaLocal+Polimundo)/3
+			Escribir "El promedio de su producto en Mercadona, TiendaLocal y Polimundo es: ",promedio,"Bs."
+		SiNo
+			Si producto=3 Entonces
+				Mercadona=1450
+				TiendaLocal=2050
+				Polimundo=1300
+				promedio=(Mercadona+TiendaLocal+Polimundo)/3
+				Escribir "El promedio de su producto en Mercadona, TiendaLocal y Polimundo es: ",promedio,"Bs."
+			SiNo
+				Escribir "Codigo inválido. Elija un objeto de la lista"
+			Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
