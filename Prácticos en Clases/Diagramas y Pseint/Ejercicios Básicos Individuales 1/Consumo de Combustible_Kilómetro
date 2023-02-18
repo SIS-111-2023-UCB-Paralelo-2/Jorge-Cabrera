@@ -1,0 +1,18 @@
+Algoritmo ConsumoKm_Lt
+	Definir conbustible,kilometros,promedio Como Real
+	Escribir "Programa para medir la cantidad de litros de combustible por kilometro recorrido"
+	Escribir "Ingrese la cantidad de litros cargados"
+	Leer combustible
+	Si combustible<=0 Entonces
+		Escribir "Usted no cargó combustible al automóvil"
+	SiNo
+		Escribir "Ingrese la cantidad de kilometros recorridos"
+		Leer kilometros
+		Si kilometros<=0 Entonces
+			Escribir "Usted debe recorrer una distancia positiva para hacer cálculo"
+		SiNo
+			promedio=combustible/kilometros
+			Escribir "Usted gastó ",promedio," litros de combustible por kilometro recorrido"
+		Fin Si
+	Fin Si
+FinAlgoritmo
