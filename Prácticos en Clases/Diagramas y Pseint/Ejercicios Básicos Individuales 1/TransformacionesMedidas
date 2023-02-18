@@ -1,0 +1,10 @@
+Algoritmo TransformacionesMedidas
+	Definir metros,centímetros,pulgadas Como Real
+	Escribir "Trasnformador de metros a centímentros y pulgadas."
+	Escribir "Introduzca solo el <número> de metros."
+	Leer metros
+	centímetros=metros*100
+	pulgadas=metros*100/2.54
+	Escribir metros," metros son: ",centímetros," centímetros."
+	Escribir metros," metros son: ",pulgadas," pulgadas"
+FinAlgoritmo
