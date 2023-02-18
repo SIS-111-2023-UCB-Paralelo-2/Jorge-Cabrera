@@ -1,0 +1,17 @@
+Algoritmo IntercambiarVariables
+	Definir variable1,variable2,varialbeAuxiliar Como Entero
+	Escribir "Programa para intercanviar 2 variables."
+	Escribir "Introduzca la primera variable entera."
+	Leer variable1
+	Escribir "Introduzca la segunda variable."
+	Leer variable2
+	Escribir "Las variables:"
+	Escribir "Variable1: ",variable1
+	Escribir "Variable2: ",variable2
+	variableAuxiliar=variable1
+	variable1=variable2
+	variable2=variableAuxiliar
+	Escribir "Ahora son:"
+	Escribir "Variable1: ",variable1
+	Escribir "Variable2: ",variable2
+FinAlgoritmo
