@@ -1,0 +1,20 @@
+Algoritmo VolumenDeCilindro
+	Definir radio,altura,númeroPI,volumen Como Real
+	númeroPI=3.1416
+	Escribir "Programa para medir el volúmen de un cilindro."
+	Escribir "Introduzca el radio del cilindro."
+	Leer radio
+	Si radio>=0 Entonces
+		Escribir "Introduzca la altura del cilindro."
+		Leer altura
+		Si altura>=0 Entonces
+			volumen=númeroPI*(radio^2)*altura
+			Escribir "El volumen de el cilindro es: ",volumen,"."
+		SiNo
+			Escribir "Por favor introduzca números positivos."
+		Fin Si
+	SiNo
+		Escribir "Por favor introduzca números positivos."
+	Fin Si
+	
+FinAlgoritmo
