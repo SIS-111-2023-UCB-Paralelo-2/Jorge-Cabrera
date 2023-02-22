@@ -1,0 +1,23 @@
+Algoritmo PorcentajeEstudiantil
+	Definir niños,niñas,porcentajeNiños,totalEstudiantes,porcentajeNiñas Como Real
+	Escribir "Programa para calcular que porcentaje de niños y niñas hay en el curso"
+	Escribir "Introduzca el número de niños que hay en el curso"
+	Leer niños
+	Si niños>=0 Entonces
+		Escribir "Introduzca el número de niñas que hay en el curso"
+		Leer niñas
+		Si niñas>=0 Entonces
+			totalEstudiantes=niños+niñas
+			porcentajeNiños=niños*100/totalEstudiantes
+			porcentajeNiñas=niñas*100/totalEstudiantes
+			Escribir "El porcentaje de niños y niñas en el aula es:"
+			Escribir "Niños: ",porcentajeNiños,"%"
+			Escribir "Niñas: ",porcentajeNiñas,"%"
+		SiNo
+			Escribir "No puede haber una cantidad negativa de niñas"
+		Fin Si
+	SiNo
+		Escribir "No puede haber una cantidad negativa de niños"
+	Fin Si
+	
+FinAlgoritmo
