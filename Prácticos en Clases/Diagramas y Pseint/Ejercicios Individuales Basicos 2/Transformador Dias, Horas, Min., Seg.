@@ -1,0 +1,47 @@
+Algoritmo ConvertidorDeTiempo
+	Definir dia,hora,minuto,segundo,númeroX Como Real
+	Definir Elección Como Entero
+	Escribir"Programa para convertir dias en horas, minutos y segundos"
+	Escribir "Ingrese la cantidad que quiera convertir"
+	Leer númeroX
+	Si númeroX>=0 Entonces
+		Escribir "Escriba a que quiere que sea convertido."
+		Escribir "Todo = 1,  Dias = 2,  Horas = 3,  Minutos = 4,  Segundos = 5"
+		Leer Elección
+		dia=númeroX
+		hora=dia*24
+		minuto=hora*60
+		segundo=minuto*60
+		Si Elección=1 Entonces
+			Escribir "El número de dias que ingresó son en:"
+			Escribir "Dias: ",dia," dias."
+			Escribir "Horas: ",hora," horas."
+			Escribir "Minutos: ",minuto," minutos."
+			Escribir "Segundos: ",segundo," segundos."
+		SiNo
+			Si Elección=2 Entonces
+				Escribir "El número de dias que ingresó son en:"
+				Escribir "Dias: ",dia," dias"
+			SiNo
+				Si Elección=3 Entonces
+					Escribir "El número de dias que ingresó son en:"
+					Escribir "Horas: ",hora," horas."
+				SiNo
+					Si Elección=4 Entonces
+						Escribir "El número de dias que ingresó son en:"
+						Escribir "Minutos: ",minuto," minutos."
+					SiNo
+						Si Elección=5 Entonces
+							Escribir "El número de dias que ingresó son en:"
+							Escribir "Segundos: ",segundo," segundos."
+						SiNo
+							Escribir "Comando Desconocido."
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	SiNo
+		Escribir "Por favor introduzca un número positivo"
+	Fin Si
+FinAlgoritmo
