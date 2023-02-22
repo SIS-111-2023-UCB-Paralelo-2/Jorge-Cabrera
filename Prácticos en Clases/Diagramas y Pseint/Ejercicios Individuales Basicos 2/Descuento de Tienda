@@ -1,0 +1,40 @@
+Algoritmo DescuentoDeTienda
+	Definir descuento,precio,precioFinal,producto,cantidad Como Real
+	descuento=0.85
+	Escribir "Programa para saber el precio de un producto con descuento del 15%"
+	Escribir "Polera = 15$  Camisa = 13%  Coca Cola = 10$  Pepsi = 8$"
+	Escribir "Introduzca el número del producto que va a comprar"
+	Escribir "Polera = 1,  Camisa = 2,  Coca Cola = 3,  Pepsi = 4"
+	Leer producto
+	Escribir "Introduzca la cantidad de productos va a comprar."
+	Leer cantidad
+	Si cantidad>=0 Entonces
+		Si producto=1 Entonces
+			precio=15*cantidad
+			precioFinal=precio*descuento
+			Escribir "El precio de su producto con el descuento es de: ",precioFinal,"$."
+		SiNo
+			Si producto=2 Entonces
+				precio=13*cantidad
+				precioFinal=precio*descuento
+				Escribir "El precio de su producto con el descuento es de: ",precioFinal,"$."
+			SiNo
+				Si producto=3 Entonces
+					precio=10*cantidad
+					precioFinal=precio*descuento
+					Escribir "El precio de su producto con el descuento es de: ",precioFinal,"$."
+				SiNo
+					Si producto=4 Entonces
+						precio=8*cantidad
+						precioFinal=precio*descuento
+						Escribir "El precio de su producto con el descuento es de: ",precioFinal,"$."
+					SiNo
+						Escribir "Comando inválido."
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	SiNo
+		Escribir "Por favor introduzca un número positivo de productos"
+	Fin Si
+FinAlgoritmo
