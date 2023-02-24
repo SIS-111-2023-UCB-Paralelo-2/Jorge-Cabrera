@@ -1,0 +1,32 @@
+Algoritmo SueldoDocenteUCB
+	Definir nombre,cargo,mes Como Caracter
+	Definir CI,sueldo,horasTrabajadas,añosAntiguedad,descuentoIndependiente,sueldoEgreso,ingresosTotales,liquidoPagable,bonoAntiguedad Como Real
+	descuentoIndependiente=0.8729
+	Escribir "Ingrese su nombre, cargo y el mes actual"
+	Leer nombre
+	Leer cargo
+	Leer mes
+	Escribir "Ingrese su CI, sueldo, horas trabajadas, y años de antiguedad"
+	Leer CI
+	Leer sueldo
+	Leer horasTrabajadas
+	Leer añosAntiguedad
+	Si añosAntiguedad>4 Entonces
+		bonoAntiguedad=sueldo*0.11
+	SiNo
+		bonoAntiguedad=sueldo*0.05
+	Fin Si
+	ingresosTotales=sueldo+bonoAntiguedad
+	liquidoPagable=ingresosTotales*descuentoIndependiente
+	sueldoEgreso=ingresosTotales-liquidoPagable
+	Escribir "Sus datos son:"
+	Escribir "Nombre: ",nombre
+	Escribir "Carnet de Identidad: ",CI
+	Escribir "Cargo: ",cargo
+	Escribir "Mes actual: ",mes
+	Escribir "Horas trabajadas: ",horasTrabajadas," Hrs."
+	Escribir "Ingresos: ", sueldo," Bs. + ",bonoAntiguedad," Bs."
+	Escribir "Sueldo Egresado: ",sueldoEgreso," Bs."
+	Escribir "Liquido pagable: ",liquidoPagable," Bs."
+	Escribir "En este mes , ",mes,", ",nombre,", con cargo: ",cargo," ingresó ",ingresosTotales," Bs. descontando el porcentaje por trabajador independiente, ",sueldoEgreso," Bs. el liquido pagable del trabajador es: ",liquidoPagable," Bs."
+FinAlgoritmo
