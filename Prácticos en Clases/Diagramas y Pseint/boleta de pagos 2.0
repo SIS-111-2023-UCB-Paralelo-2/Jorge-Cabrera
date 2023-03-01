@@ -1,0 +1,63 @@
+Algoritmo SueldoDocenteUCB
+	Definir nombre,cargo,mes Como Caracter
+	Definir CI,sueldo,horasTrabajadas,añosAntiguedad,descuentoIndependiente,sueldoEgreso,ingresosTotales,liquidoPagable,bonoAntiguedad,afp Como Real
+	Definir haberBasico,diaIngreso,mesIngreso,gestionIngreso,salarioMinimoNacional Como Entero 
+	descuentoIndependiente=0.8729
+	Escribir "Ingrese su Nombre y Apellido, cargo actual y el mes en el que se persibe el sueldo."
+	Leer nombre,cargo,mes 
+	Escribir "Ingrese su CI, sueldo, horas trabajadas, y años de antiguedad"
+	Leer CI,sueldo,horasTrabajadas,añosAntiguedad
+	Escribir "Ingrese las horas extras nocturnas y las horas extras trabajadas los feriados o Domingo"
+	Leer horasExtrasNocturno
+	Leer horasExtrasDiurno
+	haberBasico=sueldo
+	salarioMinimoNacional=2250
+	Si añosAntiguedad>0 y añosAntiguedad<2 Entonces
+		porcentajeBono=0
+	SiNo
+		Si añosAntiguedad>=2 y añosAntiguedad<4 Entonces
+			porcentajeBono=0.05
+		SiNo
+			Si añosAntiguedad>=4 y añosAntiguedad<8 Entonces
+				porcentajeBono=0.11
+			SiNo
+				Si añosAntiguedad>=8 y añosAntiguedad<11 Entonces
+					porcentajeBono=0.18
+				SiNo
+					Si añosAntiguedad>=11 y añosAntiguedad<15 Entonces
+						porcentajeBono=0.26
+					SiNo
+						Si añosAntiguedad>=15 y añosAntiguedad<20 Entonces
+							porcentajeBono=0.34
+						SiNo
+							Si añosAntiguedad>=20 y añosAntiguedad<25 Entonces
+								porcentajeBono=0.42
+							SiNo
+								Si añosAntiguedad>=25 Entonces
+									porcentajeBono=0.5
+								SiNo
+									Escribir "Código Inválido"
+								Fin Si
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	bonoAntiguedad=(salarioMinimoNacional*3)*porcentajeBono
+	ingresosTotales=haberBasico+bonoAntiguedad
+	afp=0.1271
+	sueldoEgreso=haberBasico*afp
+	liquidoPagable=ingresosTotales-sueldoEgreso
+	Escribir "Sus datos son:"
+	Escribir "Nombre: ",nombre
+	Escribir "Carnet de Identidad: ",CI
+	Escribir "Cargo: ",cargo
+	Escribir "Mes actual: ",mes
+	Escribir "Horas trabajadas: ",horasTrabajadas," Hrs."
+	Escribir "Ingresos: ", sueldo," Bs. + ",bonoAntiguedad," Bs."
+	Escribir "Sueldo Egresado: ",sueldoEgreso," Bs."
+	Escribir "Liquido pagable: ",liquidoPagable," Bs."
+	Escribir "En este mes , ",mes,", ",nombre,", con cargo: ",cargo," ingresó ",ingresosTotales," Bs. descontando el porcentaje por trabajador independiente, ",sueldoEgreso," Bs. el liquido pagable del trabajador es: ",liquidoPagable," Bs."
+FinAlgoritmo
