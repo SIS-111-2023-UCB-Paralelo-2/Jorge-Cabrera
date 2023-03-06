@@ -1,0 +1,13 @@
+Algoritmo ANSImaginario2
+	Definir sueldo,ANS Como Real
+	Escribir "Si su sueldo es mayor a 500 deberá aportar un 18% de este como Aporte Nacional Solidario"
+	Escribir "Introduzca su sueldo"
+	Leer sueldo
+	Si sueldo>500 Entonces
+		ANS=sueldo*0.18
+	SiNo
+		ANS=0
+	Fin Si
+	Escribir "Su sueldo es: ",sueldo,"Bs."
+	Escribir "Debe aportar: ",ANS,"Bs. como ANS"
+FinAlgoritmo
