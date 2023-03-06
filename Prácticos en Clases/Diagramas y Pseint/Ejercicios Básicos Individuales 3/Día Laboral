@@ -1,0 +1,16 @@
+Algoritmo HoySeTrabaja
+	Definir dia Como Entero
+	Escribir "Hola. Dime que dia es hoy y te diré si trabajas o no."
+	Escribir "Ingrese el número que corresponda al dia en el que estamos."
+	Escribir "1=Lunes, 2=Martes, 3=Miercoles, 4=Jueves, 5=Viernes, 6=Sabado o 7=Domingo."
+	Leer dia 
+	Si dia>0 y dia<8 Entonces
+		Si dia=6 o dia=7 Entonces
+			Escribir "Relájate hoy no te toca trabajar." 
+		SiNo
+			Escribir "Tengo malas noticias. Hoy te toca laburar."
+		Fin Si
+	SiNo
+		Escribir "ESE NÚMERO NO CORRESPONDE A NINGUN DÍA."
+	Fin Si
+FinAlgoritmo
