@@ -1,0 +1,18 @@
+Algoritmo VocalOConsonante
+	Definir letra Como Entero
+	Escribir "Con este programa podras saber que letras son vocales y cuales consonantes."
+	Escribir "Introduzca el número que pertenezca a la letra que quiere seleccionar."
+	Escribir "Letras: 1=a, 2=b 3=c, 4=d, 5=e, 6=f, 7=g, 8=h, 9=i, 10=j"
+	Escribir "        11=k, 12=l, 13=m, 14=n, 15=ñ, 16=o, 17=p, 18=q, 19=r"
+	Escribir "        20=s21=t, 22=u, 23=v, 24=w, 25=x, 26=y, 27=z"
+	Leer letra
+	Si letra<=0 o letra>27 Entonces
+		Escribir "EL NÚMERO INTRODUCIDO NO COINCIDE CON NINGUNA LETRA."
+	SiNo
+		Si letra=1 o letra=5 o letra=9 o letra=16 o letra=22 Entonces
+			Escribir "La letra seleccionada es: VOCAL"
+		SiNo
+			Escribir "La letra seleccionada es: CONSONANTE"
+		Fin Si
+	Fin Si
+FinAlgoritmo
