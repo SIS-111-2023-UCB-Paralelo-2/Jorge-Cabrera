@@ -1,0 +1,33 @@
+Algoritmo CapicúaONo
+	Definir digito1,digito2,digito3,numeroEntero Como Entero
+	Escribir "¿Quieres saber si tu número de 3 dígitos es capicúa?"
+	Escribir "Escribe el primer dígito de tu número. No se permiten número negativos."
+	Leer digito1
+	Si digito1>=0 y digito1<=9 Entonces
+		Escribir "Ahora escribe el segundo dígito de tu número."
+		Leer digito2
+		Si digito2>=0 y digito2<=9 Entonces
+			Escribir "Y por último el tercer dígito de tu número."
+			Leer digito3
+			Si digito3>=0 y digito3<=9 Entonces
+				numeroEntero=(digito1*100)+(digito2*10)+digito3
+				Si numeroEntero>100 Entonces
+					Si digito1=digito3 Entonces
+						Escribir "El número: ",numeroEntero," es Capicúa."
+					SiNo
+						Escribir "El número: ",numeroEntero," no es Capicúa."
+					Fin Si
+				SiNo
+					Escribir "El número: ",numeroEntero," no es Capicúa."
+				Fin Si
+			SiNo
+				Escribir "Comando inválido"
+			Fin Si
+		SiNo
+			Escribir "Comando inválido"
+		Fin Si
+	SiNo
+		Escribir "Comando inválido"
+	Fin Si
+	
+FinAlgoritmo
