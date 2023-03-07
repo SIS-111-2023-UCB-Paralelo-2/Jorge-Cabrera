@@ -1,0 +1,18 @@
+Algoritmo SalarioMínimo
+	Definir sueldo,sueldoMinimo,sueldoMayor Como Entero
+	Escribir "¿Quieres saber si te estan pagando lo mínimo que se debe?"
+	Escribir "Introduzca cuanto es su sueldo actual"
+	Leer sueldo
+	Escribir "Introduzca cuanto es el sueldo mínimo de un trabajador"
+	Leer sueldoMinimo
+	sueldoMayor=sueldo-sueldoMinimo
+	Si sueldo>sueldoMinimo Entonces
+		Escribir "El sueldo mínimo es: ",sueldoMinimo,"Bs. y usted gana: ",sueldoMayor,"Bs. más del mínimo."
+	SiNo
+		Si sueldo=sueldoMinimo Entonces
+			Escribir "El sueldo mínimo es: ",sueldoMinimo,"Bs. y usted está ganando el sueldo mínimo."
+		SiNo
+			Escribir "El sueldo mínimo es: ",sueldoMinimo,"Bs. y usted gana: ",sueldoMayor,"Bs. del mínimo."
+		Fin Si
+	Fin Si
+FinAlgoritmo
