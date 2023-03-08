@@ -1,0 +1,36 @@
+Algoritmo Fecha
+	Definir fecha,dia,mes,Mes1,año Como Caracter
+	Escribir "Intruduzca una fecha: xx/xx/xxxx"
+	Leer fecha 
+	dia=Subcadena(fecha,1,2)
+	mes=Subcadena(fecha,4,5)
+	año=Subcadena(fecha,7,10)
+	Segun mes Hacer
+		"01":
+			Escribir dia," de Enero del ",año
+		"02":
+			Escribir dia," de Febrero del ",año
+		"03":
+			Escribir dia," de Marzo del ",año
+		"04":
+			Escribir dia," de Abril del ",año
+		"05":
+			Escribir dia," de Mayo del ",año
+		"06":
+			Escribir dia," de Junio del ",año
+		"07":
+			Escribir dia," de Julio del ",año
+		"08":
+			Escribir dia," de Agosto del ",año
+		"09":
+			Escribir dia," de Septiembre del ",año
+		"10":
+			Escribir dia," de Octubre del ",año
+		"11":
+			Escribir dia," de Noviembre del ",año
+		"12":
+			Escribir dia," de Diciembre del ",año
+		De Otro Modo:
+			Escribir "Nada"
+	Fin Segun
+FinAlgoritmo
