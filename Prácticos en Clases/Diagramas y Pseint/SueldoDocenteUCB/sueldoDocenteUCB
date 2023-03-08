@@ -79,7 +79,7 @@ Algoritmo SueldoDocenteUCB
 				Si sueldo>35000 Entonces
 					aporteNacionalSolidario=((sueldo-13000)*0.01)+((sueldo-25000)*0.05)+((sueldo-35000)*0.1)
 				SiNo
-					Escribir "No puede ingresar un sueldo negativo"
+					aporteNacionalSolidario=sueldo*0.005
 				Fin Si
 			Fin Si
 		Fin Si
@@ -92,7 +92,7 @@ Algoritmo SueldoDocenteUCB
 	Si sueldo>9500 Entonces
 		Escribir "¿Cuanto monto tiene en facturas?"
 		Leer montoFacturas
-		Si montoFacturado>sueldo Entonces
+		Si montoFacturas>sueldo Entonces
 			RCIVA=0
 		SiNo
 			RCIVA=sueldo*0.13
