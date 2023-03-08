@@ -36,7 +36,7 @@ Algoritmo SueldoDocenteUCB
 								Si añosAntiguedad>=25 Entonces
 									porcentajeBono=0.5
 								SiNo
-									Escribir "Código Inválido"
+									porcentajeBono=0
 								Fin Si
 							Fin Si
 						Fin Si
