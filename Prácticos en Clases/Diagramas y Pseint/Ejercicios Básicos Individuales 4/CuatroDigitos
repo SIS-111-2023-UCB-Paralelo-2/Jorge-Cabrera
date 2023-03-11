@@ -1,0 +1,17 @@
+Funcion respuesta <- CuatroONoPalabras ( numeroCaracteres,palabra )
+	Si numeroCaracteres=4 Entonces
+		respuesta=Concatenar(palabra,"¡")
+	SiNo
+		respuesta=Concatenar(palabra,"?")
+	Fin Si
+Fin Funcion
+
+Algoritmo CuatroDigitos
+	Definir palabra Como Caracter
+	Definir numeroCaracteres Como Entero
+	Escribir "Ingrese una palabra o frase."
+	Leer palabra
+	numeroCaracteres=Longitud(palabra)
+	respuesta=CuatroONoPalabras(numeroCaracteres,palabra)
+	Escribir respuesta
+FinAlgoritmo
