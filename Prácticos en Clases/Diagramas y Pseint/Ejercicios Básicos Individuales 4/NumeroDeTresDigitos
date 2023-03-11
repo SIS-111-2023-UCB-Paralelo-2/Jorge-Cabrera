@@ -1,0 +1,21 @@
+Funcion resultado <- EsUnNumeroDeTresDigitos ( cantidadCaracteres,numeroSolicitado)
+	Si cantidadCaracteres=3 Entonces
+		Escribir "El número: ",numeroSolicitado," tiene 3 digitos."
+	SiNo
+		Si cantidadCaracteres<3 Entonces
+			Escribir "El número: ",numeroSolicitado," tiene menos de 3 digitos."
+		SiNo
+			Escribir "El número: ",numeroSolicitado," tiene más de 3 digitos."
+		Fin Si
+	Fin Si
+Fin Funcion
+
+Algoritmo NumeroDeTresDigitos
+	Definir numeroSolicitado,cantidadCaracteres Como Entero
+	Definir numeroCadena Como Caracter
+	Escribir "Introduzca cualquier número."
+	Leer numeroSolicitado
+	numeroCadena=ConvertirATexto(numeroSolicitado)
+	cantidadCaracteres=Longitud(numeroCadena)
+	resultado=EsUnNumeroDeTresDigitos(cantidadCaracteres,numeroSolicitado)
+FinAlgoritmo
