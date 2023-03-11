@@ -1,0 +1,16 @@
+Funcion resultado <- PalabraDeSeisDigitos ( numeroCaracteres )
+	Si numeroCaracteres=6 Entonces
+		Escribir "Correcto. Ganaste"
+	SiNo
+		Escribir "Incorrecto. Perdiste"
+	Fin Si
+Fin Funcion
+
+Algoritmo SeisCaracteres
+	Definir palabra Como Caracter
+	Definir numeroCaracteres Como Entero
+	Escribir "Para ganar debes ingresar una palabra que contenga solo 6 caracteres"
+	Leer palabra
+	numeroCaracteres=Longitud(palabra)
+	resultado=PalabraDeSeisDigitos(numeroCaracteres)
+FinAlgoritmo
