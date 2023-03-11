@@ -1,0 +1,16 @@
+Funcion resultado <- PalabraConA ( letras )
+	Si letras="a" o letras="A" Entonces
+		Escribir "Correcto"
+	SiNo
+		Escribir "Incorrecto"
+	Fin Si
+Fin Funcion
+
+Algoritmo PalabrasConA
+	Definir palabras Como Caracter
+	Definir numeroCaracteres Como Entero
+	Escribir "Introduzca una palabras que comience con a o A."
+	Leer palabra
+	letras=Subcadena(palabra,1,1)
+	resultado=PalabraConA(letras)
+FinAlgoritmo
