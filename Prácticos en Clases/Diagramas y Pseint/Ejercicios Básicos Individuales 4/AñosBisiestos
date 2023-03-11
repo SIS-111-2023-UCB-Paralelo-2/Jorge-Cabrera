@@ -1,0 +1,23 @@
+Funcion respuesta <- ReglasDeAñoBisiesto( año )
+	Si (año mod 4=0) y (año mod 100<>0) Entonces
+		respuesta=" es bisiesto."
+	SiNo
+		Si (año mod 100=0) y (año mod 400=0) Entonces
+			respuesta=" es bisiesto."
+		SiNo
+			respuesta=" no es bisiesto."
+		Fin Si
+	Fin Si
+Fin Funcion
+
+
+
+Algoritmo AñosBisiestos
+	Definir año Como Entero
+	Definir respuesta Como Caracter
+	Escribir "Programa para determinar si un años es bisiesto o no."
+	Escribir "Introduzca un año."
+	Leer año
+	respuesta=ReglasDeAñoBisiesto(año)
+	Escribir "El año: ",año,respuesta
+FinAlgoritmo
