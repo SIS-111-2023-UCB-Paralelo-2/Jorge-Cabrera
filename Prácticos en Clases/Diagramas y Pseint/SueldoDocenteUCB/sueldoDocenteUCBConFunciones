@@ -1,0 +1,133 @@
+Funcion aporteNacionalSolidario <- CalcularANS ( sueldo )
+	Si sueldo>0 y sueldo<=13000 Entonces
+		aporteNacionalSolidario=sueldo*0.005
+	SiNo
+		Si sueldo>13000 y sueldo<=25000 Entonces
+			aporteNacionalSolidario=(sueldo-13000)*0.01
+		SiNo
+			Si sueldo>25000 y sueldo<=35000 Entonces
+				aporteNacionalSolidario=((sueldo-13000)*0.01)+((sueldo-25000)*0.05)
+			SiNo
+				Si sueldo>35000 Entonces
+					aporteNacionalSolidario=((sueldo-13000)*0.01)+((sueldo-25000)*0.05)+((sueldo-35000)*0.1)
+				SiNo
+					aporteNacionalSolidario=sueldo*0.005
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+Fin Funcion
+
+Funcion sueldoBonoProductividad <- CalcularElBonoDeProductividad ( bonoProductividad,sueldo )
+	Si bonoProductividad="1" Entonces
+		sueldoBonoProductividad=sueldo*0.1
+	SiNo
+		Si bonoProductividad="0" Entonces
+			sueldoBonoProductividad=0
+		SiNo
+			sueldoBonoProductividad=0
+		Fin Si
+	Fin Si
+Fin Funcion
+
+Funcion porcentajeBono <- BonoDeAñosDeAntiguedad ( añosAntiguedad )
+	Si añosAntiguedad>=0 y añosAntiguedad<2 Entonces
+		porcentajeBono=0
+	SiNo
+		Si añosAntiguedad>=2 y añosAntiguedad<4 Entonces
+			porcentajeBono=0.05
+		SiNo
+			Si añosAntiguedad>=4 y añosAntiguedad<8 Entonces
+				porcentajeBono=0.11
+			SiNo
+				Si añosAntiguedad>=8 y añosAntiguedad<11 Entonces
+					porcentajeBono=0.18
+				SiNo
+					Si añosAntiguedad>=11 y añosAntiguedad<15 Entonces
+						porcentajeBono=0.26
+					SiNo
+						Si añosAntiguedad>=15 y añosAntiguedad<20 Entonces
+							porcentajeBono=0.34
+						SiNo
+							Si añosAntiguedad>=20 y añosAntiguedad<25 Entonces
+								porcentajeBono=0.42
+							SiNo
+								Si añosAntiguedad>=25 Entonces
+									porcentajeBono=0.5
+								SiNo
+									porcentajeBono=0
+								Fin Si
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+Fin Funcion
+
+
+
+Algoritmo SueldoDocenteUCBConFunciones
+	Definir nombre,cargo,mes,CI,horasTrabajadas,bonoProductividad Como Caracter
+	Definir sueldo,añosAntiguedad,sueldoEgreso,ingresosTotales,liquidoPagable,bonoAntiguedad,otrosBonosExtra,sueldoBonoProductividad,bonoHorasExtra,afp,RCIVA Como Real
+	Definir haberBasico,sueldoBonosExtra,aporteNacionalSolidario,gestionIngreso,salarioMinimoNacional,horasExtrasDiurno,horasExtrasNocturno,horasExtrasFinSemana Como Entero 
+	afp=0.1271
+	salarioMinimoNacional=2250
+	
+	Escribir "Ingrese su Nombre y Apellido, cargo actual y el mes en el que se persibe el sueldo."
+	Leer nombre,cargo,mes 
+	Escribir "Ingrese su CI, sueldo, horas trabajadas, y años de antiguedad"
+	Leer CI,sueldo,horasTrabajadas,añosAntiguedad
+	haberBasico=sueldo
+	
+	porcentajeBono=BonoDeAñosDeAntiguedad(añosAntiguedad)
+	bonoAntiguedad=(salarioMinimoNacional*3)*porcentajeBono
+	
+	Escribir "Ingrese las horas extras nocturnas, las horas extras diurnas y las horas trabajadas los feriados o Domingos"
+	Leer horasExtrasNocturno
+	Leer horasExtrasDiurno
+	Leer horasExtrasFinSemana
+	bonoHorasExtra=(sueldo/30/8*horasExtrasNocturno*1.25)+(sueldo/30/8*horasExtrasDiurno*1)+(sueldo/30/8*horasExtrasFinSemana*2)
+	
+	Escribir "Ingrese el sueldo por otros bonos"
+	Leer otrosBonosExtra
+	
+	Escribir "Tienes bono de productividad 1=Si 0=NO"
+	Leer bonoProductividad
+	sueldoBonoProductividad=CalcularElBonoDeProductividad( bonoProductividad,sueldo )
+	
+	aporteNacionalSolidario=CalcularANS( sueldo )
+	
+	Escribir "¿Cuanto monto tiene en facturas?"
+	Leer montoFacturas
+	RCIVA=(sueldo-montoFacturas)*0.13
+	
+	Escribir "¿Cuantas multas tienes?"
+	Leer multas
+	sueldoMultas=sueldo/100*multas
+	
+	ingresosTotales=haberBasico+bonoAntiguedad+bonoHorasExtra+sueldoBonoProductividad+otrosBonosExtra
+	sueldoEgreso=haberBasico*afp+aporteNacionalSolidario+sueldoMultas+RCIVA
+	liquidoPagable=ingresosTotales-sueldoEgreso
+	
+	Escribir "Sus datos son:"
+	Escribir "Nombre: ",nombre
+	Escribir "Carnet de Identidad: ",CI
+	Escribir "Cargo: ",cargo
+	Escribir "Mes actual: ",mes
+	Escribir "Horas trabajadas: ",horasTrabajadas," Hrs.Normales ",horasExtrasDiurno,"Hrs.Extras Diurnas, ",horasExtrasNocturno,"Hrs. Extras Nocturnas y ",horasExtrasFinSemana,"Hrs. Extras los fines de semana y feriados."
+	Escribir "Su haber básico es: ", haberBasico," Bs."
+	Escribir "Bono por antiguedad: ", bonoAntiguedad," Bs."
+	Escribir "Sueldo por horas extra: ",bonoHorasExtra," Bs."
+	Escribir "Sueldo por Bono de Productividad: ",sueldoBonoProductividad," Bs."
+	Escribir "Sueldo por otros Bonos: ", otrosBonosExtra," Bs."
+	Escribir "Total Ingresos: ",ingresosTotales," Bs."
+	Escribir "Descuento por AFP: ",haberBasico*afp," Bs."
+	Escribir "Descuento por ANS: ",aporteNacionalSolidario," Bs."
+	Escribir "Descuento por RC-IVA: ",RCIVA," Bs."
+	Escribir "Descuento por multas: ",sueldoMultas," Bs."
+	Escribir "Sueldo Egresado: ",sueldoEgreso," Bs."
+	Escribir "Liquido pagable: ",liquidoPagable," Bs."
+FinAlgoritmo
